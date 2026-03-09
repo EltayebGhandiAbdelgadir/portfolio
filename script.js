@@ -230,3 +230,68 @@ document.addEventListener("keydown", function(e) {
     }
 
 });
+// ===== HACKER TERMINAL EFFECT =====
+
+const terminal = document.getElementById("terminalOutput");
+
+const commands = [
+
+"whoami",
+"eltayeb_ghandi",
+
+"",
+
+"skills --list",
+"penetration testing",
+"web security",
+"active directory",
+"python scripting",
+
+"",
+
+"certifications",
+"TryHackMe Junior Penetration Tester",
+
+"",
+
+"role",
+"Vice President - SSA LPU",
+
+"",
+
+"goal",
+"OSCP Certification"
+
+];
+
+let commandIndex = 0;
+let charPos = 0;
+
+function typeTerminal(){
+
+if(commandIndex >= commands.length) return;
+
+let line = commands[commandIndex];
+
+if(charPos < line.length){
+
+terminal.innerHTML += line.charAt(charPos);
+
+charPos++;
+
+setTimeout(typeTerminal,40);
+
+}else{
+
+terminal.innerHTML += "<br>";
+
+commandIndex++;
+charPos = 0;
+
+setTimeout(typeTerminal,300);
+
+}
+
+}
+
+window.addEventListener("load",typeTerminal);
