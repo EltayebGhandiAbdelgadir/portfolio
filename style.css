@@ -334,3 +334,33 @@ margin-left:5px;
 100%{opacity:1;}
 
 }
+
+/* ===== NAV CV BUTTON ===== */
+
+.cv-nav {
+
+background:#ff0033;
+color:white;
+
+padding:6px 14px;
+
+border-radius:6px;
+
+font-size:0.9rem;
+
+transition:all 0.3s ease;
+
+box-shadow:0 0 10px rgba(255,0,51,0.6);
+
+}
+
+.cv-nav:hover{
+
+background:white;
+color:#ff0033;
+
+transform:scale(1.1);
+
+box-shadow:0 0 15px #ff0033;
+
+}
