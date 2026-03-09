@@ -1,120 +1,92 @@
-// ====== TYPING EFFECT ======
-const typingElement = document.getElementById('typing');
-const titles = [
-    "Cybersecurity Enthusiast",
-    "Penetration Tester",
-    "Data Analyst",
-    "AI Builder"
-];
-let titleIndex = 0, charIndex = 0, typingForward = true;
-
-function typeTitle() {
-    const title = titles[titleIndex];
-    if (typingForward) {
-        charIndex++;
-        if (charIndex === title.length) typingForward = false;
-    } else {
-        charIndex--;
-        if (charIndex === 0) {
-            typingForward = true;
-            titleIndex = (titleIndex + 1) % titles.length;
-        }
-    }
-    typingElement.textContent = title.slice(0, charIndex);
-    setTimeout(typeTitle, typingForward ? 80 : 40);
-}
-typeTitle();
-
-// ====== SMOOTH SCROLL FOR NAV ======
-document.querySelectorAll('.nav-list a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});
-
-// ====== CONTACT FORM FEEDBACK ======
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    document.getElementById('contactStatus').textContent = "Message sent! (Demo only)";
-    setTimeout(() => {
-        document.getElementById('contactStatus').textContent = "";
-        document.getElementById('contactForm').reset();
-    }, 2500);
-});
-
-// ====== BACKGROUND PARTICLES ======
-const canvas = document.getElementById('particles');
+// 1. Matrix Background Effect
+const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
-let particles = [];
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = document.querySelector('.hero').offsetHeight;
-}
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
 
-function createParticles() {
-    particles = [];
-    for (let i = 0; i < 60; i++) {
-        particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            r: Math.random() * 2 + 1,
-            dx: (Math.random() - 0.5) * 0.7,
-            dy: (Math.random() - 0.5) * 0.7,
-            alpha: Math.random() * 0.5 + 0.3
-        });
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()*&^";
+const fontSize = 14;
+const columns = canvas.width / fontSize;
+const drops = Array(Math.floor(columns)).fill(1);
+
+function drawMatrix() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#ff003c"; // Red matrix theme
+    ctx.font = fontSize + "px monospace";
+
+    for (let i = 0; i < drops.length; i++) {
+        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i]++;
     }
 }
-createParticles();
+setInterval(drawMatrix, 50);
 
-function drawParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let p of particles) {
-        ctx.save();
-        ctx.globalAlpha = p.alpha;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
-        ctx.fillStyle = "#ff0033";
-        ctx.shadowColor = "#ff0033";
-        ctx.shadowBlur = 8;
-        ctx.fill();
-        ctx.restore();
+// 2. Typing Effect
+const phrases = ["Cybersecurity Specialist", "Penetration Tester", "AI Developer"];
+let i = 0; let j = 0; let currentPhrase = [];
+let isDeleting = false;
+const typingTarget = document.getElementById('typing');
 
-        // Move
-        p.x += p.dx;
-        p.y += p.dy;
-        // Bounce
-        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
-        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+function loopPhrases() {
+    const phrase = phrases[i];
+    if (isDeleting) {
+        currentPhrase.pop();
+        j--;
+    } else {
+        currentPhrase.push(phrase[j]);
+        j++;
     }
-    requestAnimationFrame(drawParticles);
-}
-drawParticles();
-window.addEventListener('resize', () => {
-    resizeCanvas();
-    createParticles();
-});
+    typingTarget.innerHTML = currentPhrase.join("");
 
-// ====== SKILL BAR ANIMATION ======
-function animateSkillBars() {
-    document.querySelectorAll('.skill-bar-fill').forEach(bar => {
-        const width = bar.getAttribute('style').match(/width:(\d+)%/)[1];
-        bar.style.width = '0';
-        setTimeout(() => {
-            bar.style.width = width + '%';
-        }, 400);
+    if (!isDeleting && j === phrase.length) {
+        isDeleting = true;
+        setTimeout(loopPhrases, 2000);
+    } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % phrases.length;
+        setTimeout(loopPhrases, 500);
+    } else {
+        setTimeout(loopPhrases, isDeleting ? 50 : 100);
+    }
+}
+loopPhrases();
+
+// 3. Terminal Emulator logic
+const termBody = document.getElementById('terminal-body');
+const commands = [
+    "> nmap -sV 192.168.1.1",
+    "> Scanning for vulnerabilities...",
+    "> Found CVE-2019-9053: CMS Made Simple Exploit",
+    "> Initializing payload...",
+    "> Access Granted. Session established.",
+    "> Eltayeb Ghandi: Full Permissions verified."
+];
+
+let cmdIndex = 0;
+function runTerminal() {
+    if (cmdIndex < commands.length) {
+        let p = document.createElement('p');
+        p.className = "t-output";
+        p.innerHTML = commands[cmdIndex];
+        termBody.appendChild(p);
+        termBody.scrollTop = termBody.scrollHeight;
+        cmdIndex++;
+        setTimeout(runTerminal, 1500);
+    }
+}
+
+// 4. Scroll Reveal Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            if(entry.target.id === 'terminal') runTerminal();
+        }
     });
-}
-window.addEventListener('DOMContentLoaded', animateSkillBars);
+}, { threshold: 0.1 });
 
-// ====== ACCESSIBILITY: KEYBOARD NAV ======
-document.addEventListener('keydown', function(e) {
-    if (e.key === "Tab") {
-        document.body.classList.add('user-is-tabbing');
-    }
-});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
