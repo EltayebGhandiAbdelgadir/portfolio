@@ -1,248 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eltayeb Ghandi | Cybersecurity Portfolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eltayeb Ghandi | Cybersecurity Portfolio</title>
+
+<meta name="description" content="Eltayeb Ghandi Cybersecurity Portfolio - Penetration Tester, AI Developer, and Vice President of SSA LPU">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <!-- ====== NAVIGATION ====== -->
-    <nav aria-label="Main Navigation">
-        <ul class="nav-list">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- ====== HERO SECTION ====== -->
-    <section class="hero" id="hero" aria-label="Hero Section">
-        <canvas class="particles hero-bg" id="particles"></canvas>
-        <div class="hero-content">
-            <h1>Eltayeb Ghandi</h1>
-            <div class="typing" id="typing"></div>
-        </div>
-    </section>
+<!-- ===== NAVIGATION ===== -->
 
-    <!-- ====== ABOUT ME ====== -->
-    <section id="about" aria-label="About Me">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <img src="./1750824866442.png" alt="Eltayeb Ghandi Portrait" class="about-photo" />
-            <div class="about-text">
-                <p>
-                    Passionate about ethical hacking, penetration testing, and cybersecurity challenges. Experienced in data analysis, optimizing logistics routes, and leading tech teams.<br>
-                    <strong>Former Head of Computer Department</strong> at Sudan University of Science and Technology (West Campus).<br>
-                    Skilled in managing teams, organizing events, and working with global organizations such as <strong>IEEE Sudan</strong> and <strong>AIESEC India</strong>.
-                </p>
-            </div>
-        </div>
-    </section>
+<nav aria-label="Main Navigation">
 
-    <!-- ====== SKILLS ====== -->
-    <section id="skills" aria-label="Skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <!-- Each skill: icon, name, animated bar -->
-            <div class="skill-card">
-                <span class="skill-icon">🌐</span>
-                <div class="skill-name">HTML</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">🎨</span>
-                <div class="skill-name">CSS</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">⚡</span>
-                <div class="skill-name">JavaScript</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">🐍</span>
-                <div class="skill-name">Python</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">🔍</span>
-                <div class="skill-name">PenTesting (JPT)</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">🛡️</span>
-                <div class="skill-name">Active Directory</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">📡</span>
-                <div class="skill-name">Networking</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">📊</span>
-                <div class="skill-name">Data Analysis</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">🔗</span>
-                <div class="skill-name">Web Security</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">🕵️‍♂️</span>
-                <div class="skill-name">Nmap</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">🧪</span>
-                <div class="skill-name">Burp Suite</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">💣</span>
-                <div class="skill-name">Metasploit</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">🔬</span>
-                <div class="skill-name">Wireshark</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">📱</span>
-                <div class="skill-name">Streamlit Apps</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
-            </div>
-            <div class="skill-card">
-                <span class="skill-icon">🤖</span>
-                <div class="skill-name">AI Projects</div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
-            </div>
-        </div>
-    </section>
+<ul class="nav-list">
 
-    <!-- ====== PROJECTS ====== -->
-    <section id="projects" aria-label="Projects">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Hairstyle Recommendation AI App Screenshot" class="project-img" />
-                <div class="project-content">
-                    <div class="project-title">Hairstyle Recommendation AI App</div>
-                    <div class="project-desc">AI-powered web app that recommends hairstyles based on face shape analysis, supports all genders and hair types.</div>
-                    <a href="#" class="project-btn">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Delivery Route Optimizer Screenshot" class="project-img" />
-                <div class="project-content">
-                    <div class="project-title">Delivery Route Optimizer</div>
-                    <div class="project-desc">Data-driven logistics tool to optimize delivery routes based on package weights.</div>
-                    <a href="#" class="project-btn">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="CVE-2019-9053 Exploit Script Screenshot" class="project-img" />
-                <div class="project-content">
-                    <div class="project-title">CVE-2019-9053 Exploit Script</div>
-                    <div class="project-desc">Security research project targeting CMS Made Simple.</div>
-                    <a href="#" class="project-btn">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Active Directory Pass-Back Attack Simulation Screenshot" class="project-img" />
-                <div class="project-content">
-                    <div class="project-title">Active Directory Pass-Back Attack Simulation</div>
-                    <div class="project-desc">Ethical hacking lab setup demonstrating LDAP credential capture.</div>
-                    <a href="#" class="project-btn">View Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<li><a href="#hero">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#hobbies">Hobbies</a></li>
+<li><a href="#contact">Contact</a></li>
 
-    <!-- ====== EXPERIENCE / ACHIEVEMENTS ====== -->
-    <section id="experience" aria-label="Experience and Achievements">
-        <h2>Experience & Achievements</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-title">Head of Computer Department – Sudan University of Science and Technology (West Campus)</div>
-                <div class="timeline-date">2021 – 2023</div>
-                <div class="timeline-desc">Led the department, managed teams, and organized technical events and workshops.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-title">IEEE Sudan Branch</div>
-                <div class="timeline-date">2021 – Present</div>
-                <div class="timeline-desc">Event organization and technical workshops for students and professionals.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-title">AIESEC India</div>
-                <div class="timeline-date">2024</div>
-                <div class="timeline-desc">Junior manager Outgoing Corporate Sector.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-title">TryHackMe Junior Penetration Tester & Web Fundamentals</div>
-                <div class="timeline-date">2025</div>
-                <div class="timeline-desc">Completed JPT and Web Fundamentals paths on TryHackMe.</div>
-            </div>
-        </div>
-    </section>
+</ul>
 
-    <!-- ====== HOBBIES ====== -->
-    <section id="hobbies" aria-label="Hobbies">
-        <h2>Hobbies</h2>
-        <div class="hobbies-grid">
-            <div class="hobby-card">
-                <span class="hobby-icon">📚</span>
-                <div class="hobby-title">Reading</div>
-                <div class="hobby-desc">Fantasy & mystery novels</div>
-            </div>
-            <div class="hobby-card">
-                <span class="hobby-icon">🕵️‍♂️</span>
-                <div class="hobby-title">Cybersecurity CTFs</div>
-                <div class="hobby-desc">Exploring security challenges</div>
-            </div>
-            <div class="hobby-card">
-                <span class="hobby-icon">🤖</span>
-                <div class="hobby-title">AI Projects</div>
-                <div class="hobby-desc">Building smart apps</div>
-            </div>
-            <div class="hobby-card">
-                <span class="hobby-icon">🎤</span>
-                <div class="hobby-title">Volunteering</div>
-                <div class="hobby-desc">Tech events & workshops</div>
-            </div>
-        </div>
-    </section>
+</nav>
 
-    <!-- ====== CONTACT ====== -->
-    <section id="contact" aria-label="Contact">
-        <h2>Contact</h2>
-        <form class="contact-form" id="contactForm" autocomplete="off">
-            <input type="text" name="name" id="contactName" placeholder="Your Name" required aria-label="Your Name" />
-            <input type="email" name="email" id="contactEmail" placeholder="Your Email" required aria-label="Your Email" />
-            <textarea name="message" id="contactMessage" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-            <span id="contactStatus" style="font-size:1em; color:#ff0033;"></span>
-        </form>
-        <div class="contact-social" aria-label="Social Media">
-            <a href="mailto:altybghandi@gmail.com" aria-label="Email"><span title="Email">📧</span></a>
-            <a href="https://github.com/EltayebGhandiAbdelgadir" target="_blank" aria-label="GitHub"><span title="GitHub">🐙</span></a>
-            <a href="https://www.linkedin.com/in/eltayeb-ghandi-49347b23a/" target="_blank" aria-label="LinkedIn"><span title="LinkedIn">💼</span></a>
-        </div>
-    </section>
+<!-- ===== HERO SECTION ===== -->
 
-    <script src="script.js"></script>
+<section class="hero" id="hero">
+
+<canvas class="particles hero-bg" id="particles"></canvas>
+
+<div class="hero-content">
+
+<h1 class="hero-name">Eltayeb Ghandi</h1>
+
+<p class="hero-tagline">
+Cybersecurity Enthusiast • Penetration Tester • AI Developer
+</p>
+
+<div class="hero-badges">
+
+<span class="badge">Vice President – SSA LPU</span>
+<span class="badge">TryHackMe JPT</span>
+<span class="badge">Future OSCP</span>
+
+</div>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="btn-primary">View Projects</a>
+<a href="#contact" class="btn-secondary">Contact Me</a>
+
+</div>
+
+<div class="typing" id="typing"></div>
+
+</div>
+
+</section>
+
+<!-- ===== ABOUT ===== -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="about-container">
+
+<img src="./1750824866442.png" alt="Eltayeb Ghandi Portrait" class="about-photo">
+
+<div class="about-text">
+
+<p>
+
+I am a cybersecurity enthusiast passionate about ethical hacking,
+penetration testing, and building secure systems.
+
+</p>
+
+<p>
+
+Currently serving as <strong>Vice President of the Sudanese Students Association
+at Lovely Professional University (SSA LPU)</strong>, helping organize community
+events and support international students.
+
+</p>
+
+<p>
+
+Previously I served as <strong>Head of the Computer Department at Sudan University
+of Science and Technology (West Campus)</strong>, where I led teams and organized
+technical workshops.
+
+</p>
+
+<p>
+
+My focus is penetration testing, vulnerability research, and building
+AI-powered applications.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== SKILLS ===== -->
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<span class="skill-icon">🌐</span>
+<div class="skill-name">HTML</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">🎨</span>
+<div class="skill-name">CSS</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">⚡</span>
+<div class="skill-name">JavaScript</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">🐍</span>
+<div class="skill-name">Python</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">🐧</span>
+<div class="skill-name">Linux / Kali</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">💻</span>
+<div class="skill-name">Parrot OS</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">🔍</span>
+<div class="skill-name">PenTesting (JPT)</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">📡</span>
+<div class="skill-name">Networking</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">🕵️</span>
+<div class="skill-name">Nmap</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">🧪</span>
+<div class="skill-name">Burp Suite</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">💣</span>
+<div class="skill-name">Metasploit</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">🔬</span>
+<div class="skill-name">Wireshark</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
+</div>
+
+<div class="skill-card">
+<span class="skill-icon">🤖</span>
+<div class="skill-name">AI Projects</div>
+<div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== PROJECTS ===== -->
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" class="project-img">
+
+<div class="project-content">
+
+<div class="project-title">Hairstyle Recommendation AI</div>
+
+<div class="project-desc">
+AI web application that recommends hairstyles based on face shape analysis.
+</div>
+
+<a href="#" class="project-btn">View Project</a>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" class="project-img">
+
+<div class="project-content">
+
+<div class="project-title">Delivery Route Optimizer</div>
+
+<div class="project-desc">
+Data analysis tool that optimizes delivery routes based on package weights.
+</div>
+
+<a href="#" class="project-btn">View Project</a>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" class="project-img">
+
+<div class="project-content">
+
+<div class="project-title">CVE-2019-9053 Exploit</div>
+
+<div class="project-desc">
+Security research project targeting CMS Made Simple vulnerability.
+</div>
+
+<a href="#" class="project-btn">View Project</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+
+<section id="experience">
+
+<h2>Experience & Achievements</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-title">
+Vice President – Sudanese Students Association (SSA LPU)
+</div>
+
+<div class="timeline-date">
+2025 – Present
+</div>
+
+<div class="timeline-desc">
+Leading initiatives for Sudanese students at LPU and organizing cultural and
+community events.
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-title">
+Head of Computer Department – Sudan University of Science and Technology
+</div>
+
+<div class="timeline-date">
+2021 – 2023
+</div>
+
+<div class="timeline-desc">
+Managed the department and organized technical workshops.
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-title">
+IEEE Sudan Branch
+</div>
+
+<div class="timeline-date">
+2021 – Present
+</div>
+
+<div class="timeline-desc">
+Organizing technical events and workshops.
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-title">
+AIESEC India
+</div>
+
+<div class="timeline-date">
+2024
+</div>
+
+<div class="timeline-desc">
+Junior Manager – Outgoing Corporate Sector.
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-title">
+TryHackMe Junior Penetration Tester
+</div>
+
+<div class="timeline-date">
+2025
+</div>
+
+<div class="timeline-desc">
+Completed JPT and Web Fundamentals path.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== HOBBIES ===== -->
+
+<section id="hobbies">
+
+<h2>Hobbies</h2>
+
+<div class="hobbies-grid">
+
+<div class="hobby-card">
+<span class="hobby-icon">📚</span>
+<div class="hobby-title">Reading</div>
+<div class="hobby-desc">Fantasy & mystery novels</div>
+</div>
+
+<div class="hobby-card">
+<span class="hobby-icon">🕵️</span>
+<div class="hobby-title">Cybersecurity CTF</div>
+<div class="hobby-desc">Solving hacking challenges</div>
+</div>
+
+<div class="hobby-card">
+<span class="hobby-icon">🤖</span>
+<div class="hobby-title">AI Development</div>
+<div class="hobby-desc">Building intelligent apps</div>
+</div>
+
+<div class="hobby-card">
+<span class="hobby-icon">🎤</span>
+<div class="hobby-title">Volunteering</div>
+<div class="hobby-desc">Community leadership</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== CONTACT ===== -->
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+
+<textarea rows="5" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div class="contact-social">
+
+<a href="mailto:altybghandi@gmail.com">📧</a>
+<a href="https://github.com/EltayebGhandiAbdelgadir" target="_blank">🐙</a>
+<a href="https://www.linkedin.com/in/eltayeb-ghandi-49347b23a/" target="_blank">💼</a>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
 </body>
 </html>
